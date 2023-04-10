@@ -1,0 +1,452 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.box-color {
+	color: #ffffff;
+	background: #ffffff;
+	text-align: center;
+	margin: 0;
+	font-family: 'Roboto Mono', monospace;
+font-family: 'Zilla Slab', serif;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav { 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img { 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+/* Remove underlines from links */
+
+a {
+	text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+	display: none;
+}
+
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 1920px.
+1920px would fit a large monitor or tv. Sizes will vary depending on the projects
+you work on and the intended audience */
+
+#container {
+	margin: 0 auto;
+	width: 1920px;
+}
+
+/* this is our grid based off of our XD file */
+.grid-con {
+	display: grid;
+	grid-template-columns: repeat(12, 122px);
+	grid-column-gap: 16px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
+#header-con {
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#main-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	transition: all 0.5s ease;
+}
+#main-nav a {
+	color: aliceblue;
+    display: block;
+    text-decoration: none;
+    padding: 3px 30px;
+	transition: all 0.5s ease;
+}
+#main-nav a:hover{
+	color: #000;
+	transform: translateY(-10PX);
+}
+#header-box1 {
+	grid-column: 1/3;
+	/* Remove as content will dictate height */
+	height: 80px;
+	background-color: #e06262;
+}
+#header-box1 a img {
+	margin-left: 5px;
+	margin-top: 7px;
+}
+#main-nav {
+	grid-column: 3/11;
+	/* Remove as content will dictate height */
+	height: 80px;
+	background-color: #e06262;
+	color: black;
+}
+#main-nav input {
+	height: 35px;
+	font-weight: bold;
+	color: black;
+}
+#header-box2 {
+	grid-column: 11/-1;
+	/* Remove as content will dictate height */
+	height: 80px;
+	background-color:#e06262;
+}
+#header-box2 a img {
+	height: 40px;
+	width: 40px;
+	margin-top: 13px;
+	padding: 8px;
+}
+
+/* Specific to index page desktop  */
+
+#hero {
+	margin-top: 100px;
+	background-color: rgb(172, 251, 251);
+}
+
+#hero-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	height: 582px;
+	color: black;
+	font-size: 37px;
+	text-align: left;
+	background-color: rgb(172, 251, 251);
+	
+}
+#hero-text button {
+	height: 60px;
+	width: 100px;
+	color: black;
+	background-color: #e06262;
+	grid-column: 3;
+	font-size: 15px;
+	
+}
+#hero-text button:hover {
+	color: #000;
+	background-color: #ffffff;
+	transition: background-color 0.5s ease-in-out;
+	box-shadow: 2px 3px 13px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 5px 22px 0.5px rgba(0, 0, 0, 0.3);
+
+}
+
+#hero-image {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 582px;
+}
+
+#products {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#products h2 {
+	grid-column: 1/-1;
+	text-align: center;
+}
+
+#product1 {
+	grid-column: 1/5;
+	/* Remove as content will dictate height */
+	height: 507px;
+}
+
+#product2 {
+	grid-column: 5/9;
+	/* Remove as content will dictate height */
+	height: 507px;
+}
+
+#product3 {
+	grid-column: 9/-1;
+	/* Remove as content will dictate height */
+	height: 507px;
+}
+
+.product-box {
+	background-color: #ffd9d9;
+	transition: all 0.8s ease;
+	
+}
+.product-box:hover{
+	transform: translateY(-15px);
+	box-shadow: 0 2rem 2rem 0 rgb(0, 0, 0,0.4) ;
+}
+
+#about-con {
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ffd9d9;
+}
+
+.about-title {
+	text-align: center;
+	font-size: 50px;
+}
+
+#about-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	height: 700px;
+	font-size: 40px;
+	color: black;
+	background-color: #ffd9d9;
+	text-align: left;
+}
+#about-text button {
+	height: 60px;
+	width: 100px;
+	color: black;
+	background-color: #e06262;
+	font-size: 15px;
+	
+}
+#about-text button:hover {
+	color: #000;
+	background-color: #ffffff;
+	transition: background-color 0.5s ease-in-out;
+	box-shadow: 2px 3px 13px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 5px 22px 0.5px rgba(0, 0, 0, 0.3);
+}
+#about-image {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 700px;
+}
+
+#contact {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	background-color: rgb(172, 251, 251);
+}
+
+#contact-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	height: 700px;
+	margin-left: 30px;
+	text-align: left;
+	font-size: 35px;
+	font-weight: 100;
+	background-color: rgb(172, 251, 251);
+	color: black;
+}
+
+#contact-form {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 700px;
+	margin: 1.5rem 0 1.5rem 0;
+	background-color: #ffd9d9;
+	
+}
+#contact-form input {
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	color: black;
+	font-weight: bolder;
+}
+.formname {
+	height: 60px;
+	width: 500px;
+}
+
+.massage {
+	height: 300px;
+	width: 500px;
+}
+/*Common page elements  */
+.submit-button {
+	height: 60px;
+	width: 350px;
+}
+#footer-con {
+	background-color: #e06262;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	display: inline-block;
+}
+
+#footer-logo {
+	grid-column: 1/3;
+	/* Remove as content will dictate height */
+	height: 80px;
+	background-color: #e06262;
+}
+
+#footer-nav {
+	grid-column: 3/-1;
+	/* Remove as content will dictate height */
+	height: 80px;
+	margin-bottom: 100px;
+	background-color: #e06262;
+	color: black;
+}
+#footer-nav a {display: inline-block; 
+	padding-right: 120px;
+	font-size: 30px;
+}
+
+/* .nav-footer {
+	display: inline-block;
+} */
+
+#footer-newsletter1 {
+	grid-column: 1/4;
+	/* Remove as content will dictate height */
+	height: 80px;
+	background-color: #e06262;
+	
+}
+#footer-newsletter1 p {
+	font-size: 25px;
+	color: rgb(0, 0, 0);
+	
+	
+}
+#footer-newsletter2 {
+	grid-column: 4/7;
+	/* Remove as content will dictate height */
+	height: 80px;
+	padding: 10px;
+	background-color: #e06262;
+}
+#footer-newsletter2 input {
+	height: 40px;
+	width: 250px;
+	background-color: rgb(143, 213, 215);
+	margin-top: 22px;	
+	font-weight: bold;
+}
+#footer-newsletter2 button {
+	background-color: rgb(143, 213, 215);
+	margin-top: 22px;
+	height: 40px;
+	font-weight: bold;
+}
+#footer-social {
+	grid-column: 9/-1;
+	/* Remove as content will dictate height */
+	height: 80px;
+	margin-bottom: 40px;
+	background-color: #e06262;
+}
+#footer-social h2 {
+	color: rgb(0, 0, 0);
+}
+#footer-social a img {
+	height: 35px;
+	width: 35px;
+	padding: 0px 15px;
+}
+
+/* gallery page */
+
+#gallery-hero-con {
+	
+	background: url("../images/Gallery-hero.jpg");
+	height: 580px;
+	
+	
+}
+
+#gallery-text {
+	grid-column: 1/9;
+	/* Remove as content will dictate height */
+	height: 200px;
+	margin-top: 100px;
+	font-size: 30px;
+	color: rgb(239, 66, 66);
+	background: none;
+	font-weight: 900;
+}
+
+#gallery-controls {
+	margin-top: 200px;
+	grid-column: 6/8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dot {
+	
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+	
+  }
+
+#gallery h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	font-size: 35px;
+  }
+
+.gallery-box {
+	
+	grid-column: span 4 / span 4;
+	/* Remove as content will dictate height */
+	height: 507px;
+	margin-bottom: 20px;
+	background-color: #ffd9d9;
+	transition: all 0.8s ease;
+}
+.gallery-box:hover{
+	transform: translateY(-15px);
+	box-shadow: 0 2rem 2rem 0 rgb(0, 0, 0,0.4) ;
+}
+.copyright {
+	grid-column: 6/8;
+}
+.companyname {
+	text-align: left;
+	font-size: 50px;
+	font-weight: bold;
+}
+.offer-teg{
+	font-size: 30px;
+	color: red;
+}
+.shoes {
+	font-size: 35px;
+	color: rgb(84, 80, 80);
+	font-style :italic;
+}
